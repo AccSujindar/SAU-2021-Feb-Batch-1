@@ -1,0 +1,29 @@
+<div class="container ">
+    <div class="row">
+        <div class="col-sm-12">
+            
+            <div class="form-group">
+                <label for="sessionName">Session Name</label>
+                <input style="max-width: 500px;" [(ngModel)]="editCurrentSession.sessionName" type="text" class="form-control" id="sessionName">
+            </div>
+
+            <div class="form-group">
+                <label for="sessionDescription">Session Description</label>
+                <input style="max-width: 500px;" [(ngModel)]="editCurrentSession.description" type="text" class="form-control" id="sessionDescription">
+            </div>
+
+            <div class="form-group">
+                <label for="instructorName">Instructor Name</label>
+                <input style="max-width: 500px;" [(ngModel)]="editCurrentSession.instructorName" type="text" class="form-control" id="instructorName">
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-info" (click)="updateSession()">Update</button>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+

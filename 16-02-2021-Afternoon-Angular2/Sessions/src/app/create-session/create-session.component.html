@@ -1,0 +1,32 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            
+            <div class="form-group">
+                <label for="sessionName">Session Name</label>
+                <input style="max-width: 500px;" [(ngModel)]="sessionName" type="text" class="form-control" id="sessionName">
+            </div>
+
+            <div class="form-group">
+                <label for="sessionDescription">Session Description</label>
+                <input style="max-width: 500px;" [(ngModel)]="sessionDescription" type="text" class="form-control" id="sessionDescription">
+            </div>
+
+            <div class="form-group">
+                <label for="instructorName">Instructor Name</label>
+                <input style="max-width: 500px;" [(ngModel)]="instructorName" type="text" class="form-control" id="instructorName">
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-success" (click)="createSession()">Create</button>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+

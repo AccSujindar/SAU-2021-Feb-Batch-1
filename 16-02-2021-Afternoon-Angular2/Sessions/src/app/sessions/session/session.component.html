@@ -1,0 +1,16 @@
+<mat-card class="mycard">
+    <mat-card-title>{{currentSession.sessionName}}</mat-card-title>
+    <mat-card-content>
+        <p>{{currentSession.description}}</p>
+    </mat-card-content>
+    <h3>By {{currentSession.instructorName}}</h3>
+</mat-card>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <a routerLink="edit" class="btn btn-info mycard">Edit</a>
+            <button (click)="deleteSession()" class="btn btn-danger mycard">Delete</button>
+        </div>
+    </div>
+</div>
