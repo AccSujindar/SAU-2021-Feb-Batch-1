@@ -1,0 +1,119 @@
+
+// concat
+
+var a = [1,3,4,6];
+var b = [2,9,"Apple"];
+var c = a.concat(b);
+console.log(c);
+// Output: [1, 3, 4, 6, 2, 9, "Apple"]
+
+// every
+
+var a = [2,4,6,8,10];
+a.every((ele)=> ele%2==0); // output : true;
+var a = [2,4,6,8,11];
+a.every((ele)=> ele%2==0); // output : false;
+
+//filter
+var a = [1,2,3,4,5,6,7,8,9,10];
+var b = a.filter((ele)=>ele%2==0);
+console.log(b); // output: [2, 4, 6, 8, 10];
+
+//forEach
+var a = [1,2,3,4,5,6,7,8,9,10];
+a.forEach((ele)=>{console.log(ele)}); //output: 1 2 3 4 5 6 7 8 9 10 (Prints every number in new line)
+
+//indexOf
+var a = [1,2,3,4,5,6,7,8,9,10];
+console.log(a.indexOf(5)); //output: 4;
+console.log(a.indexOf(20)); //output: -1;
+
+//join
+var a = [1,2,3,4];
+var b = a.join(); 
+console.log(b); //output: "1234";
+var c = a.join('_');
+console.log(c); //output: "1_2_3_4";
+
+//lastIndexOf
+var a = [1,1,2,3,4,1,2,4,1,5];
+console.log(a.lastIndexOf(1)); //output: 8;
+console.log(a.lastIndexOf(8)); //output: -1;
+
+//map
+var a = [1,2,3,4,5];
+var b = a.map((ele)=>{return ele * 10});
+console.log(b); //output: [10, 20, 30, 40, 50];
+
+//pop
+var a = [1,2,3,4,5];
+var b = a.pop();
+console.log(b); //output: 5;
+console.log(a); //output: [1,2,3,4];
+
+//push
+var a = [1,2,3,4,5];
+var b = a.push(6);
+console.log(b); //output: 6;
+console.log(a); //output: [1,2,3,4,5,6];
+
+//reduce
+var a = [1,2,3,4,5];
+var b = a.reduce((a,b)=>{return a+b;});
+console.log(b); //output: 15;
+
+//reduceRight
+var a = [5,4,3,2,1];
+var b = a.reduceRight((a,b)=>{return a-b;});
+console.log(b); /.output: -13;
+
+//reverse
+var a = [1,2,3,4,5];
+a.reverse();
+console.log(a); //output: [5,4,3,2,1];
+
+//shift
+
+var a = [1,2,3,4,5];
+var b = a.shift();
+console.log(b); //output: 1;
+
+//slice
+
+var a = [1,2,3,4,5];
+var b = a.slice(2,4);
+console.log(b); //output: [3,4];
+
+//some
+var a = [1,2,3,4,5];
+var b = a.some((ele)=>ele%3==0);
+var c = a.some((ele)=>ele%7==0);
+console.log(b); //output: true;
+console.log(c); //output: false;
+
+//toSource -- Not sure how it works.
+
+//sort
+var a = [5,7,22,1,6];
+a.sort((x,y)=>{
+    return x-y;
+});
+console.log(a); //output: [1,5,6,7,22];
+
+//splice
+
+var a = [1,2,3,4,5,6,7,8];
+a.splice(2,2);
+console.log(a); //output: [1,2,5,6,7,8];
+
+//toString
+
+var a = [1,2,3,4,5];
+var b = a.toString();
+console.log(b); //output: "1,2,3,4,5";
+
+//unshift
+var a = [1,2,3,4,5];
+var b = a.unshift(10);
+console.log(a); //output: 10,1,2,3,4,5;
+console.log(b); //output: 6;

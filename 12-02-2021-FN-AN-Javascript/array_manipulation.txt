@@ -1,0 +1,21 @@
+var myfunc = (arr)=>{
+
+arr.sort((x,y) => 
+{
+return x-y;
+});
+console.log("sorted Array:" + arr);
+
+arr.forEach((ele,idx,ar)=>
+{
+ar[idx] = ar[idx] * 10;
+});
+console.log("After Multiplying by 10: " + arr);
+
+var newArr = arr.filter((ele)=>{
+return ele % 3 == 0;
+});
+
+return newArr;
+
+}

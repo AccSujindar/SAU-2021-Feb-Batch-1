@@ -1,0 +1,19 @@
+var check = (str)=>{
+	
+	var reg1 = /lion.*/i;
+	var reg2 = /.*cat/i;
+	var reg3 = /a*.*b+.*c*.*/i;
+	
+	if(str.match(reg1) || str.match(reg2))
+	{
+		return true;
+	}
+	else if(str.match(reg3))
+	{
+		console.log("a - " + str.indexOf('a'));
+		console.log("b - " + str.indexOf('b'));
+		console.log("c - " + str.indexOf('c'));
+		return true;
+	}
+	return false;
+}

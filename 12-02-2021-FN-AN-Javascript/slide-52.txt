@@ -1,0 +1,21 @@
+var add = (function() {
+	var counter = 0;
+	return function() {return ++counter;};
+})();
+
+
+self invoking function are also called anonymous function - which get called immediately after the definition and
+exactly once. They are generally used for initialization purpose. Parameters can also be passed to this function.
+
+In the above code snippet, a self invoking function is called and its return value is assigned to the add variable.
+
+closures - the annonymous function initialize the counter variable to 0 and returns a function.
+	   Now, add is a function which can be called. The variable counter can still be accessed by add function,
+	   because of the parent scope. This is called as closures.
+
+This is very useful because, now the counter variable can be accessed only by this add function. if we had declared 
+counter variable outside, any function will be able to 'change' the value. But, now since it is present inside the 
+annonymous function, the value can only be incremented for each invocation of add and no other operation can be 
+performed on the counter variable.And hence it acts like a private variable. 
+	   
+	   

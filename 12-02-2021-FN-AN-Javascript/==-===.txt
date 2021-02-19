@@ -1,0 +1,24 @@
+== : comparing two operends by ignoring their data types.
+=== : comparing two operends, but their data types is also considered.
+
+Example: a) 5 == "5"   output: true
+	 b) 5 === "5"  output: false
+
+Why a) is true?
+
+When doing comparison, string will be converted to a number. Empty string will be converted to zero,
+and if it cannot be resolved to a number, it will converted to 'NAN'. In the example, "5" can be 
+converted to number 5, hence it will return true.
+
+why b) is false?
+
+Here the === will take data types. since 5 is a number and "5" is a string, which are different,
+it will return false;
+
+Example: a) true == "true" output: false
+
+Here the output is false because,true will converted to number which becomes 1, "true" will be 
+converted to a number which becomes NAN, now 1 == NAN becomes false.
+
+Reference: 1) https://262.ecma-international.org/5.1/#sec-11.9.3
+	   2) https://262.ecma-international.org/5.1/#sec-11.9.6
