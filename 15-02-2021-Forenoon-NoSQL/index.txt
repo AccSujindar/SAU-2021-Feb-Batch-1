@@ -1,0 +1,8 @@
+indexing:
+
+For bookmyshow, we need to create index on cityname. Since someone is 
+going to browse movie on that particular city. 
+
+
+For FootballPlayer, we need to create index on numberOfGoals, because as
+per the requirement we are going to query players who scored goals > 10. 
