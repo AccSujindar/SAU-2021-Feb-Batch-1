@@ -19,7 +19,7 @@ public class Config extends AbstractCouchbaseConfiguration {
 
 		@Override
 		public String getPassword() {
-			return "admin@123";
+			return "admin1";
 		}
 
 		@Override
