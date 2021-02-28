@@ -1,0 +1,27 @@
+.Library ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.Library li {
+    display: inline-block;
+    margin: 20px;
+}
+
+.Library a {
+    text-decoration: none;
+    color: black;
+}
+
+.Library a:hover,
+.Library a:active,
+.Library a.active {
+    color: #fa923f;
+}
+.Library a:active,
+.Library a.active {
+    text-decoration: underline;
+}

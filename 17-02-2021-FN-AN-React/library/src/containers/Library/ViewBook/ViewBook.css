@@ -1,0 +1,37 @@
+.ViewBook {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    text-align: center;
+}
+
+.Edit label {
+    display: block;
+    color: grey;
+}
+
+.Edit button {
+    padding: 10px;
+    border: 1px;
+    background-color: pink;
+    cursor: pointer;
+    outline: none;
+    color: #fa923f;
+    margin-bottom: 30px;
+}
+
+.Edit button:hover,
+.Edit button:active {
+    background-color: red;
+    color: black;
+}
+
+.Edit button.Delete {
+    color: red;
+}
+
+.Edit button.Delete:hover,
+.Edit button.Delete:active {
+    color: darkred;
+}
