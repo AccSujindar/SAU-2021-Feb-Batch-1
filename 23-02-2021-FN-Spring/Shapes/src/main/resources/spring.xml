@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="https://www.springframework.org/schema/beans"
+	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="https://www.springframework.org/schema/aop"
+	xsi:schemaLocation="https://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		https://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+<aop:aspectj-autoproxy />
+<bean name="person" class="aop.Person">
+	<property name="Name" value="Sujindar"></property>
+</bean>	
+
+<bean name="personService" class="aop.PersonService">
+	<property name="p1" ref="person"></property>
+</bean>
+
+<bean name="personAspect" class="aop.PersonAspect" />
+		
+		
+</beans>
