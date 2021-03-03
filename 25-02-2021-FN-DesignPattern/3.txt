@@ -1,0 +1,67 @@
+Singleton:
+
+Singleton is design pattern which ensures that a class has only
+one instance and provides global access to that object.
+
+Thread safe singleton class:
+
+public class SingletonExample
+{
+	private static SingletonExample se;
+	private SingletonExample()
+	{
+	}
+	// Synchronized - thread safe.
+	synchronized public static SingletonExample getInstance()
+	{
+		if(se == null) // Lazy initialization
+		{
+			se = new SingletonExample();
+		}
+		return se;
+	}
+}
+
+Serialized class:
+
+class SingletonExample implements Serializable  
+{  
+    public static SingletonExample se = new SingletonExample(); 
+      
+    private SingletonExample()  
+    {  
+    } 
+    protected Object readResolve() 
+    { 
+        return se; 
+    } 
+} 
+
+Overcoming clone issue:
+
+class SuperClass implements Cloneable 
+{ 
+  @Override
+  protected Object clone() throws CloneNotSupportedException  
+  { 
+    return super.clone(); 
+  } 
+} 
+
+public class SingletonExample extends SuperClass
+{
+	private static SingletonExample se;
+	private SingletonExample()
+	{
+	}
+	public static SingletonExample getInstance()
+	{
+		if(se == null) // Lazy initialization
+		{
+			se = new SingletonExample();
+		}
+		return se;
+	}
+}
+
+
